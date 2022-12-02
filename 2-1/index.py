@@ -3,6 +3,9 @@ class Round:
         self.opponentValue = line.split(" ")[0]
         self.myValue = line.split(" ")[1]
     
+    def getTotalScore(self):
+        return self.getItemScore() + self.getGameScore()
+
     def getItemScore(self):
         if self.myValue == "X":
             return 1
@@ -35,9 +38,6 @@ class Round:
                 return 6
             elif self.opponentValue == "C":
                 return 3
-    
-    def getTotalScore(self):
-        return self.getItemScore() + self.getGameScore()
 
 
 
